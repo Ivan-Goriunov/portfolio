@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ivan Goriunov | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">Ivan Goriunov</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            MBA Candidate | Business Analytics | Finance | Operations | NCAA Fencing
+          </p>
+          <h1>
+            Building practical business judgment through analytics, operations, and
+            competition.
+          </h1>
+          <p class="intro">
+            I'm an MBA student at Boston College building experience across analytics,
+            finance, operations, and athletics. This site collects the projects and
+            work that show how I think, learn, and solve problems.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Portfolio snapshot">
+          <div class="panel-header">
+            <div>
+              <h2>Portfolio Snapshot</h2>
+            </div>
+          </div>
+
+          <div class="snapshot-list">
+            <div>
+              <span>Education</span>
+              <p>Boston College MBA Candidate</p>
+            </div>
+            <div>
+              <span>Concentration</span>
+              <p>Business Analytics</p>
+            </div>
+            <div>
+              <span>Undergraduate</span>
+              <p>BBA in Economics, Florida Atlantic University, summa cum laude</p>
+            </div>
+            <div>
+              <span>Athletics</span>
+              <p>NCAA Men's Epee</p>
+            </div>
+            <div>
+              <span>Project Work</span>
+              <p>Valuation, forecasting, operations, and analytics</p>
+            </div>
+          </div>
+
+          <div class="tag-row">
+            <span>Finance Modeling</span>
+            <span>Operations</span>
+            <span>Business Analytics</span>
+            <span>Competitive Discipline</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Who I Am</h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-copy">
+            <p>
+              My name is Ivan Goriunov. I am pursuing an MBA at Boston College with a
+              concentration in Business Analytics, after earning a BBA in Economics
+              from Florida Atlantic University.
+            </p>
+            <p>
+              My background brings together academics, hands-on operations experience,
+              athletics, coaching, languages, and analytical project work. I created
+              this site to show how those experiences connect and to share the work,
+              interests, and projects that do not always fit neatly on a resume.
+            </p>
+          </div>
+          <div class="about-carousel" data-carousel aria-label="Personal photo carousel">
+            <div class="carousel-viewport">
+              <figure class="carousel-slide is-active">
+                <img
+                  src="assets/Fencing Podium Straight.JPG"
+                  alt="Ivan Goriunov on a fencing podium"
+                />
+                <figcaption>Summer Nationals Podium</figcaption>
+              </figure>
+              <figure class="carousel-slide is-next slide-piano">
+                <img
+                  src="assets/Piano Adjusted.png"
+                  alt="Ivan Goriunov playing piano"
+                />
+                <figcaption>At the Piano</figcaption>
+              </figure>
+              <figure class="carousel-slide slide-graduation">
+                <img
+                  src="assets/Graduation.jpg"
+                  alt="Ivan Goriunov at graduation"
+                />
+                <figcaption>Graduation day</figcaption>
+              </figure>
+              <figure class="carousel-slide is-prev slide-headshot">
+                <img
+                  src="assets/Fencing Photoshoot 1.jpg"
+                  alt="Ivan Goriunov in a fencing photoshoot"
+                />
+                <figcaption>Fencing photoshoot</figcaption>
+              </figure>
+              <button
+                class="carousel-arrow carousel-arrow-prev"
+                type="button"
+                data-carousel-prev
+                aria-label="Show previous photo"
+              >
+                <
+              </button>
+              <button
+                class="carousel-arrow carousel-arrow-next"
+                type="button"
+                data-carousel-next
+                aria-label="Show next photo"
+              >
+                >
+              </button>
+            </div>
+            <div class="carousel-dots" aria-label="Choose photo">
+              <button
+                class="is-active"
+                type="button"
+                data-carousel-dot="0"
+                aria-label="Show fencing podium photo"
+              ></button>
+              <button
+                type="button"
+                data-carousel-dot="1"
+                aria-label="Show piano photo"
+              ></button>
+              <button
+                type="button"
+                data-carousel-dot="2"
+                aria-label="Show graduation photo"
+              ></button>
+              <button
+                type="button"
+                data-carousel-dot="3"
+                aria-label="Show fencing photoshoot"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section accent">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>Featured Work</h2>
+          <p class="section-subtitle">
+            A mix of analytical projects, applied operations work, and competitive
+            experiences that show how I approach problems.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article
+            class="project-card"
+            data-project="dcf"
+            role="button"
+            tabindex="0"
+          >
+            <p class="project-type">AI-Assisted Valuation Project</p>
+            <h3>Oracle AI Backlog Valuation</h3>
+            <div class="project-preview memo-preview" aria-label="Oracle investment memo preview">
+              <p>DCF Investment Memo</p>
+              <span class="interaction-hint hint-metric" data-project-hint>Tap a metric</span>
+              <div class="memo-rule"></div>
+              <div class="memo-tabs" aria-label="Choose valuation metric">
+                <button
+                  class="is-active"
+                  type="button"
+                  data-card-control
+                  data-memo-metric="implied"
+                  aria-pressed="true"
+                >
+                  Implied Value
+                </button>
+                <button
+                  type="button"
+                  data-card-control
+                  data-memo-metric="ev"
+                  aria-pressed="false"
+                >
+                  EV
+                </button>
+                <button
+                  type="button"
+                  data-card-control
+                  data-memo-metric="equity"
+                  aria-pressed="false"
+                >
+                  Equity
+                </button>
+                <button
+                  type="button"
+                  data-card-control
+                  data-memo-metric="recommendation"
+                  aria-pressed="false"
+                >
+                  Recommendation
+                </button>
+              </div>
+              <div class="memo-callout" aria-live="polite">
+                <span data-memo-label>Implied Value / Share</span>
+                <strong data-memo-value>$52.71</strong>
+              </div>
+            </div>
+            <button class="card-action" type="button">View Project Details</button>
+          </article>
+
+          <article
+            class="project-card"
+            data-project="inventory"
+            role="button"
+            tabindex="0"
+          >
+            <p class="project-type">Operations & Analytics</p>
+            <h3>Inventory Workflow Improvement</h3>
+            <div class="project-preview inventory-outcome-preview" aria-label="Inventory workflow outcome snapshot">
+              <p>Workflow Outcome</p>
+              <div class="outcome-callout" data-card-control>
+                <span class="interaction-hint hint-drag" data-project-hint>Drag</span>
+                <div class="outcome-slider" data-outcome-slider aria-label="Inventory workflow outcomes">
+                  <div class="outcome-slide is-active">
+                    <span>Item Entry Time Reduction</span>
+                    <strong>30 → 20 min</strong>
+                  </div>
+                  <div class="outcome-slide">
+                    <span>Annual Cost Reduction</span>
+                    <strong>~$2K</strong>
+                  </div>
+                </div>
+                <div class="outcome-controls" aria-label="Choose inventory outcome">
+                  <button
+                    class="is-active"
+                    type="button"
+                    data-card-control
+                    data-outcome-index="0"
+                    aria-label="Show item entry time outcome"
+                    aria-pressed="true"
+                  ></button>
+                  <button
+                    type="button"
+                    data-card-control
+                    data-outcome-index="1"
+                    aria-label="Show cost reduction outcome"
+                    aria-pressed="false"
+                  ></button>
+                </div>
+              </div>
+              <dl class="outcome-support">
+                <div>
+                  <dt>Workflow</dt>
+                  <dd>Excel + Google Drive</dd>
+                </div>
+                <div>
+                  <dt>Records</dt>
+                  <dd>SKU, pricing, item details</dd>
+                </div>
+                <div>
+                  <dt>Photos</dt>
+                  <dd>Linked product folders</dd>
+                </div>
+              </dl>
+            </div>
+            <button class="card-action" type="button">View Project Details</button>
+          </article>
+
+          <article
+            class="project-card"
+            data-project="fencing"
+            role="button"
+            tabindex="0"
+          >
+            <p class="project-type">Athletics And Leadership</p>
+            <h3>NCAA Fencing and Coaching</h3>
+            <img
+              class="project-image"
+              src="assets/DIV1A_lunge.jpg"
+              alt="Ivan Goriunov fencing in competition"
+            />
+            <p class="image-note">
+              Final bout from my 2023 Division 1A Men's Epee win.
+            </p>
+            <button class="card-action" type="button">View Project Details</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="resume" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Resume</p>
+          <h2>Education, Experience, And Skills</h2>
+        </div>
+        <div class="resume-layout">
+          <div>
+            <h3>Education</h3>
+            <p>
+              MBA, Business Analytics, Boston College. BBA in Economics, Florida
+              Atlantic University, summa cum laude.
+            </p>
+          </div>
+          <div>
+            <h3>Technical Skills</h3>
+            <p>
+              Excel modeling, Stata, R, Analytic Solver, Power BI, sales forecasting,
+              process optimization, and anomaly detection.
+            </p>
+          </div>
+          <div>
+            <h3>Languages</h3>
+            <p>
+              Fluent in English and Russian. Beginner Spanish. Currently learning
+              Chinese.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let&apos;s Connect</h2>
+        </div>
+        <button class="button contact-trigger" type="button" data-contact-open>
+          Send Me a Message
+        </button>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/ivan-goriunov-7aa555236">
+            Ivan Goriunov on LinkedIn
+          </a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/Ivan-Goriunov">
+            Ivan Goriunov on GitHub
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Ivan Goriunov. Built for GitHub Pages.</p>
+    </footer>
+
+    <div class="modal-overlay" data-modal-overlay hidden>
+      <section
+        class="project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button class="modal-close" type="button" data-modal-close aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-body" data-modal-body></div>
+      </section>
+    </div>
+
+    <div class="modal-overlay" data-contact-overlay hidden>
+      <section
+        class="project-modal contact-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          data-contact-close
+          aria-label="Close"
+        >
+          &times;
+        </button>
+        <div class="modal-body">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-modal-title">Send Me a Message</h2>
+          <p class="modal-lede">
+            Share a note, question, or opportunity, and I&apos;ll get back to
+            you.
+          </p>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mzdowzrv"
+            method="POST"
+            data-contact-form
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from Ivan Goriunov portfolio"
+            />
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+            <p class="form-status" data-contact-status aria-live="polite"></p>
+            <button class="button primary" type="submit" data-contact-submit>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
