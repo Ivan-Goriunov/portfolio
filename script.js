@@ -134,9 +134,7 @@ const contactCloseButton = document.querySelector("[data-contact-close]");
 const contactForm = document.querySelector("[data-contact-form]");
 const contactSubmitButton = document.querySelector("[data-contact-submit]");
 const contactStatus = document.querySelector("[data-contact-status]");
-const pianoCard = document.querySelector("[data-piano-card]");
-const pianoFlipButton = document.querySelector("[data-piano-flip]");
-const pianoFlipBackButton = document.querySelector("[data-piano-flip-back]");
+const flipCards = document.querySelectorAll("[data-flip-card]");
 const cards = document.querySelectorAll("[data-project]");
 const carousel = document.querySelector("[data-carousel]");
 const outcomeSlider = document.querySelector("[data-outcome-slider]");
@@ -436,18 +434,37 @@ contactOverlay.addEventListener("click", (event) => {
   }
 });
 
-pianoFlipButton.addEventListener("click", () => {
-  pianoCard.classList.add("is-flipped");
-  pianoCard.querySelector(".flip-card-front").setAttribute("aria-hidden", "true");
-  pianoCard.querySelector(".flip-card-back").setAttribute("aria-hidden", "false");
-  pianoFlipBackButton.focus();
-});
+function setFlipCard(card, isFlipped) {
+  const front = card.querySelector(".flip-card-front");
+  const back = card.querySelector(".flip-card-back");
 
-pianoFlipBackButton.addEventListener("click", () => {
-  pianoCard.classList.remove("is-flipped");
-  pianoCard.querySelector(".flip-card-front").setAttribute("aria-hidden", "false");
-  pianoCard.querySelector(".flip-card-back").setAttribute("aria-hidden", "true");
-  pianoFlipButton.focus();
+  card.classList.toggle("is-flipped", isFlipped);
+  front.setAttribute("aria-hidden", String(isFlipped));
+  back.setAttribute("aria-hidden", String(!isFlipped));
+}
+
+flipCards.forEach((card) => {
+  const openButton = card.querySelector("[data-flip-open]");
+  const closeButton = card.querySelector("[data-flip-close]");
+  const back = card.querySelector(".flip-card-back");
+
+  openButton.addEventListener("click", () => {
+    setFlipCard(card, true);
+    closeButton.focus();
+  });
+
+  closeButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setFlipCard(card, false);
+    openButton.focus();
+  });
+
+  back.addEventListener("click", () => {
+    if (card.classList.contains("is-flipped")) {
+      setFlipCard(card, false);
+      openButton.focus();
+    }
+  });
 });
 
 contactForm.addEventListener("submit", async (event) => {
@@ -491,11 +508,13 @@ document.addEventListener("keydown", (event) => {
     closeContact();
   }
 
-  if (event.key === "Escape" && pianoCard.classList.contains("is-flipped")) {
-    pianoCard.classList.remove("is-flipped");
-    pianoCard.querySelector(".flip-card-front").setAttribute("aria-hidden", "false");
-    pianoCard.querySelector(".flip-card-back").setAttribute("aria-hidden", "true");
-    pianoFlipButton.focus();
+  if (event.key === "Escape") {
+    flipCards.forEach((card) => {
+      if (card.classList.contains("is-flipped")) {
+        setFlipCard(card, false);
+        card.querySelector("[data-flip-open]").focus();
+      }
+    });
   }
 });
 

@@ -34,7 +34,7 @@
             competition.
           </h1>
           <p class="intro">
-            I built this site as an extension of my resume: a place to show
+            I built this site as an ext<!--  -->ension of my resume: a place to show
             selected projects, classwork, achievements, and personal interests in
             more depth. It highlights the analytical work I am learning to do, the
             professional skills I am building, and the experiences outside the
@@ -332,20 +332,98 @@
           </p>
         </div>
         <div class="background-layout">
-          <div class="background-card">
-            <h3>Academic Foundation</h3>
-            <ul>
-              <li>Coursework across business analytics, finance, operations, and AI applications.</li>
-              <li>Class projects used to practice valuation, memo writing, forecasting, and process analysis.</li>
-            </ul>
+          <div class="background-card flip-card" data-flip-card>
+            <div class="flip-card-inner">
+              <div class="flip-card-face flip-card-front">
+                <h3>Academic Foundation</h3>
+                <ul>
+                  <li>
+                    <button class="text-link" type="button" data-flip-open>
+                      Coursework
+                    </button>
+                    across business analytics, finance, operations, and AI applications.
+                  </li>
+                  <li>
+                    Class projects used to practice valuation, memo writing,
+                    forecasting, and process analysis.
+                  </li>
+                </ul>
+              </div>
+              <div class="flip-card-face flip-card-back" aria-hidden="true">
+                <button class="flip-back" type="button" data-flip-close aria-label="Back to academic foundation">
+                  Back
+                </button>
+                <h3>Coursework Map</h3>
+                <div class="coursework-map">
+                  <div>
+                    <p>Data & Analysis</p>
+                    <span>Data Analytics I & III</span>
+                    <span>Data Visualization</span>
+                  </div>
+                  <div>
+                    <p>Spreadsheet Modeling</p>
+                    <span>Management Science</span>
+                    <span>Advanced Excel Modeling</span>
+                  </div>
+                  <div>
+                    <p>Finance & Valuation</p>
+                    <span>AI Applications in Business Analytics</span>
+                    <span>Financial Statement Analysis</span>
+                  </div>
+                  <div>
+                    <p>Strategy & Operations</p>
+                    <span>Marketing Management</span>
+                    <span>Strategic Management</span>
+                    <span>Operations Management</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="background-card">
-            <h3>Tools In Practice</h3>
-            <ul>
-              <li>Excel and spreadsheet modeling for class projects and workflow tracking.</li>
-              <li>AI-assisted research, drafting, source organization, and code-supported building.</li>
-              <li>Exposure to analytics and visualization tools through coursework and projects.</li>
-            </ul>
+          <div class="background-card flip-card" data-flip-card>
+            <div class="flip-card-inner">
+              <div class="flip-card-face flip-card-front">
+                <h3>Tools In Practice</h3>
+                <ul>
+                  <li>
+                    Excel for modeling,
+                    <button class="text-link" type="button" data-flip-open>
+                      workflow
+                    </button>
+                    tracking, and organizing messy business information.
+                  </li>
+                  <li>AI tools for research support, drafting, coding help, and structuring analysis.</li>
+                  <li>Tableau and visualization tools for clearer business communication.</li>
+                </ul>
+              </div>
+              <div class="flip-card-face flip-card-back" aria-hidden="true">
+                <button class="flip-back" type="button" data-flip-close aria-label="Back to tools in practice">
+                  Back
+                </button>
+                <h3>Workflow Stack</h3>
+                <div class="workflow-stack" aria-label="Applied workflow stack">
+                  <div>
+                    <span>Collect</span>
+                    <strong>Market research, financial records</strong>
+                  </div>
+                  <b aria-hidden="true">↓</b>
+                  <div>
+                    <span>Process & Clean</span>
+                    <strong>Python, Excel, AI research and coding</strong>
+                  </div>
+                  <b aria-hidden="true">↓</b>
+                  <div>
+                    <span>Model & Analyze</span>
+                    <strong>Excel, Pivot Tables, Analytic Solver</strong>
+                  </div>
+                  <b aria-hidden="true">↓</b>
+                  <div>
+                    <span>Visualize & Communicate</span>
+                    <strong>Tableau, Power BI, memos, dashboards</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="background-card">
             <h3>Applied Habits</h3>
@@ -355,37 +433,42 @@
               <li>Explaining complicated ideas through coaching, writing, and project work.</li>
             </ul>
           </div>
-          <div class="background-card flip-card" data-piano-card>
+          <div class="background-card flip-card" data-flip-card>
             <div class="flip-card-inner">
               <div class="flip-card-face flip-card-front">
                 <h3>Interests & Curiosity</h3>
                 <ul>
-                  <li>Fluent in English and Russian; currently learning Chinese.</li>
+                  <li>Athletics and sports as a long-running part of my life.</li>
                   <li>
-                    Reading,
-                    especially classic literature, plus psychology and puzzle-like stories.
+                    Reading, especially classic literature and detective fiction.
                   </li>
+                  <li>Interested in human psychology.</li>
                   <li>
-                    <button class="text-link" type="button" data-piano-flip>Piano</button>
-                    as a personal interest I keep coming back to.
+                    <button class="text-link" type="button" data-flip-open>Piano</button>
+                    as a lifelong skill and a way to reset from work, sports,
+                    and stress.
                   </li>
                 </ul>
               </div>
               <div class="flip-card-face flip-card-back" aria-hidden="true">
-                <button class="flip-back" type="button" data-piano-flip-back aria-label="Back to interests">
+                <button class="flip-back" type="button" data-flip-close aria-label="Back to interests">
                   Back
                 </button>
                 <h3>Piano</h3>
                 <p class="mini-kicker">Music Repertoire</p>
                 <div class="repertoire-list">
                   <p>Favorites:</p>
-                  <ul>
-                    <li>Coming soon.</li>
-                  </ul>
-                  <p>All Other Pieces:</p>
-                  <ul>
-                    <li>Coming soon.</li>
-                  </ul>
+                  <p class="piece-list">Farewell to the Homeland by Ogiński</p>
+                  <p class="piece-list">Merry-Go-Round of Life</p>
+                  <p class="piece-list">How Young We Were by Alexander Gradsky</p>
+                  <p>Also played:</p>
+                  <p class="piece-list">
+                    Tchaikovsky Piano Concerto No. 1, Hungarian Dance, Winged
+                    Swings, Yesterday, Für Elise, Bach Prelude in C Major,
+                    Turkish March, Snow White, and Golden Wind.
+                  </p>
+                  <p>Currently learning:</p>
+                  <p class="piece-list">Clair de Lune</p>
                 </div>
               </div>
             </div>
