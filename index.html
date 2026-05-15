@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ivan Goriunov | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,7 +18,7 @@
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
+        <a href="#background">Background</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -28,9 +34,11 @@
             competition.
           </h1>
           <p class="intro">
-            I'm an MBA student at Boston College building experience across analytics,
-            finance, operations, and athletics. This site collects the projects and
-            work that show how I think, learn, and solve problems.
+            I built this site as an extension of my resume: a place to show
+            selected projects, classwork, achievements, and personal interests in
+            more depth. It highlights the analytical work I am learning to do, the
+            professional skills I am building, and the experiences outside the
+            classroom that shape how I approach work.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">View Projects</a>
@@ -314,32 +322,73 @@
         </div>
       </section>
 
-      <section id="resume" class="section">
+      <section id="background" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Resume</p>
-          <h2>Education, Experience, And Skills</h2>
+          <p class="eyebrow">Background</p>
+          <h2>Beyond The Resume</h2>
+          <p class="section-subtitle">
+            A few academic foundations, practical tools, habits, and interests
+            that sit behind the projects and experiences on this site.
+          </p>
         </div>
-        <div class="resume-layout">
-          <div>
-            <h3>Education</h3>
-            <p>
-              MBA, Business Analytics, Boston College. BBA in Economics, Florida
-              Atlantic University, summa cum laude.
-            </p>
+        <div class="background-layout">
+          <div class="background-card">
+            <h3>Academic Foundation</h3>
+            <ul>
+              <li>Coursework across business analytics, finance, operations, and AI applications.</li>
+              <li>Class projects used to practice valuation, memo writing, forecasting, and process analysis.</li>
+            </ul>
           </div>
-          <div>
-            <h3>Technical Skills</h3>
-            <p>
-              Excel modeling, Stata, R, Analytic Solver, Power BI, sales forecasting,
-              process optimization, and anomaly detection.
-            </p>
+          <div class="background-card">
+            <h3>Tools In Practice</h3>
+            <ul>
+              <li>Excel and spreadsheet modeling for class projects and workflow tracking.</li>
+              <li>AI-assisted research, drafting, source organization, and code-supported building.</li>
+              <li>Exposure to analytics and visualization tools through coursework and projects.</li>
+            </ul>
           </div>
-          <div>
-            <h3>Languages</h3>
-            <p>
-              Fluent in English and Russian. Beginner Spanish. Currently learning
-              Chinese.
-            </p>
+          <div class="background-card">
+            <h3>Applied Habits</h3>
+            <ul>
+              <li>Turning messy information into a clearer structure, model, memo, or workflow.</li>
+              <li>Learning by building, testing, adjusting, and asking better questions.</li>
+              <li>Explaining complicated ideas through coaching, writing, and project work.</li>
+            </ul>
+          </div>
+          <div class="background-card flip-card" data-piano-card>
+            <div class="flip-card-inner">
+              <div class="flip-card-face flip-card-front">
+                <h3>Interests & Curiosity</h3>
+                <ul>
+                  <li>Fluent in English and Russian; currently learning Chinese.</li>
+                  <li>
+                    <button class="text-link" type="button" data-books-fly>Reading</button>,
+                    especially classic literature, plus psychology and puzzle-like stories.
+                  </li>
+                  <li>
+                    <button class="text-link" type="button" data-piano-flip>Piano</button>
+                    as a personal interest I keep coming back to.
+                  </li>
+                </ul>
+              </div>
+              <div class="flip-card-face flip-card-back" aria-hidden="true">
+                <button class="flip-back" type="button" data-piano-flip-back aria-label="Back to interests">
+                  Back
+                </button>
+                <h3>Piano</h3>
+                <p class="mini-kicker">Music Repertoire</p>
+                <div class="repertoire-list">
+                  <p>Favorites:</p>
+                  <ul>
+                    <li>Coming soon.</li>
+                  </ul>
+                  <p>All Other Pieces:</p>
+                  <ul>
+                    <li>Coming soon.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -370,6 +419,8 @@
     <footer>
       <p>&copy; 2026 Ivan Goriunov. Built for GitHub Pages.</p>
     </footer>
+
+    <div class="book-flock" data-book-flock aria-hidden="true"></div>
 
     <div class="modal-overlay" data-modal-overlay hidden>
       <section

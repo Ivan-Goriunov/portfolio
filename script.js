@@ -134,6 +134,11 @@ const contactCloseButton = document.querySelector("[data-contact-close]");
 const contactForm = document.querySelector("[data-contact-form]");
 const contactSubmitButton = document.querySelector("[data-contact-submit]");
 const contactStatus = document.querySelector("[data-contact-status]");
+const pianoCard = document.querySelector("[data-piano-card]");
+const pianoFlipButton = document.querySelector("[data-piano-flip]");
+const pianoFlipBackButton = document.querySelector("[data-piano-flip-back]");
+const booksFlyButton = document.querySelector("[data-books-fly]");
+const bookFlock = document.querySelector("[data-book-flock]");
 const cards = document.querySelectorAll("[data-project]");
 const carousel = document.querySelector("[data-carousel]");
 const outcomeSlider = document.querySelector("[data-outcome-slider]");
@@ -217,6 +222,7 @@ function openProject(projectId, card) {
   }
 
   activeCard = card;
+  modalBody.dataset.activeProject = projectId;
   modalBody.innerHTML = `
     <p class="eyebrow">${project.type}</p>
     <h2 id="modal-title">${project.title}</h2>
@@ -236,6 +242,7 @@ function closeProject() {
   overlay.hidden = true;
   document.body.classList.remove("modal-open");
   modalBody.innerHTML = "";
+  delete modalBody.dataset.activeProject;
 
   if (activeCard) {
     activeCard.focus();
@@ -431,6 +438,37 @@ contactOverlay.addEventListener("click", (event) => {
   }
 });
 
+pianoFlipButton.addEventListener("click", () => {
+  pianoCard.classList.add("is-flipped");
+  pianoCard.querySelector(".flip-card-front").setAttribute("aria-hidden", "true");
+  pianoCard.querySelector(".flip-card-back").setAttribute("aria-hidden", "false");
+  pianoFlipBackButton.focus();
+});
+
+pianoFlipBackButton.addEventListener("click", () => {
+  pianoCard.classList.remove("is-flipped");
+  pianoCard.querySelector(".flip-card-front").setAttribute("aria-hidden", "false");
+  pianoCard.querySelector(".flip-card-back").setAttribute("aria-hidden", "true");
+  pianoFlipButton.focus();
+});
+
+booksFlyButton.addEventListener("click", () => {
+  const book = document.createElement("div");
+  book.className = "flying-book";
+  book.innerHTML = `
+    <span class="book-cover book-cover-left"></span>
+    <span class="book-cover book-cover-right"></span>
+    <span class="book-page book-page-left"></span>
+    <span class="book-page book-page-right"></span>
+    <span class="book-spine"></span>
+  `;
+  bookFlock.append(book);
+
+  window.setTimeout(() => {
+    book.remove();
+  }, 5200);
+});
+
 contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -470,6 +508,13 @@ document.addEventListener("keydown", (event) => {
 
   if (event.key === "Escape" && !contactOverlay.hidden) {
     closeContact();
+  }
+
+  if (event.key === "Escape" && pianoCard.classList.contains("is-flipped")) {
+    pianoCard.classList.remove("is-flipped");
+    pianoCard.querySelector(".flip-card-front").setAttribute("aria-hidden", "false");
+    pianoCard.querySelector(".flip-card-back").setAttribute("aria-hidden", "true");
+    pianoFlipButton.focus();
   }
 });
 
