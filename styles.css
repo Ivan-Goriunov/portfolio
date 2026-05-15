@@ -393,8 +393,8 @@ button.button {
 .about-layout {
   align-items: center;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  max-width: 1220px;
-  gap: clamp(24px, 5vw, 56px);
+  max-width: 100%;
+  gap: clamp(44px, 7vw, 120px);
 }
 
 .about-copy {
@@ -403,9 +403,8 @@ button.button {
 }
 
 .about-carousel {
-  width: min(100%, 620px);
-  justify-self: end;
-  margin-right: -290px;
+  width: min(100%, clamp(680px, 52vw, 960px));
+  justify-self: center;
 }
 
 .carousel-viewport {
@@ -419,7 +418,7 @@ button.button {
   position: absolute;
   top: 35%;
   left: 50%;
-  width: min(72%, 430px);
+  width: min(52%, 430px);
   margin: 0;
   overflow: hidden;
   padding: 6px;
@@ -444,17 +443,19 @@ button.button {
 }
 
 .carousel-slide.is-prev {
+  left: 23%;
   z-index: 2;
   opacity: 0.82;
   filter: saturate(0.92);
-  transform: translate(-122%, -50%) rotateY(18deg) scale(0.7);
+  transform: translate(-50%, -50%) rotateY(18deg) scale(0.72);
 }
 
 .carousel-slide.is-next {
+  left: 77%;
   z-index: 3;
   opacity: 0.88;
   filter: saturate(0.94);
-  transform: translate(22%, -50%) rotateY(-18deg) scale(0.7);
+  transform: translate(-50%, -50%) rotateY(-18deg) scale(0.72);
 }
 
 .carousel-slide img {
@@ -499,12 +500,12 @@ button.button {
 .carousel-arrow {
   position: absolute;
   z-index: 6;
-  top: 50%;
+  top: 35%;
   width: 42px;
   height: 42px;
   color: #26312b;
   background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(217, 210, 196, 0.82);
+  border: 2px solid rgba(151, 136, 111, 0.9);
   border-radius: 999px;
   box-shadow: 0 12px 36px rgba(32, 35, 30, 0.12);
   cursor: pointer;
@@ -515,11 +516,11 @@ button.button {
 }
 
 .carousel-arrow-prev {
-  left: 8px;
+  left: calc(50% - min(26%, 215px) - 54px);
 }
 
 .carousel-arrow-next {
-  right: 8px;
+  right: calc(50% - min(26%, 215px) - 54px);
 }
 
 .carousel-arrow:hover,
@@ -1665,6 +1666,35 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+@media (max-width: 1180px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(32px, 5vw, 64px);
+  }
+
+  .about-carousel {
+    width: min(100%, clamp(560px, 52vw, 740px));
+  }
+
+  .carousel-slide.is-prev {
+    left: 23%;
+    transform: translate(-50%, -50%) rotateY(18deg) scale(0.7);
+  }
+
+  .carousel-slide.is-next {
+    left: 77%;
+    transform: translate(-50%, -50%) rotateY(-18deg) scale(0.7);
+  }
+
+  .carousel-arrow-prev {
+    left: calc(50% - min(26%, 215px) - 54px);
+  }
+
+  .carousel-arrow-next {
+    right: calc(50% - min(26%, 215px) - 54px);
+  }
 }
 
 @media (max-width: 860px) {
